@@ -8,3 +8,56 @@ output: html_document
 Sys.timezone()
 ```
 
+```{r}
+dtObject<-ymd_hms("1970-01-01 00:02:53") 
+```
+
+```{r}
+dtObjectVector<-ymd_hms(
+  c("1970-01-01 00:02:53",
+    "1980-02-11 11:25:22")
+)
+```
+
+```{r}
+class(dtObject)
+```
+
+```{r}
+dtObject
+```
+
+```{r}
+library(lubridate)
+Sys.timezone()
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
+LisbonDateTime
+
+typeof(twDateTime)
+as.integer(twDateTime)
+as.double(twDateTime)
+typeof(LisbonDateTime)
+as.integer(LisbonDateTime)
+as.double(LisbonDateTime)
+
+NowDateTime <- dmy_hm("27-03-2019 16:04")
+TwDateTime <- dmy_hm("27-03-2019 16:04",tz="Asia/Taipei")
+
+TwDateTime
+
+currenttime <- dmy_hm("27-03-2019 16:04")
+
+currenttime
+
+timeone <- ymd("2018-09-11")
+timeone
+
+timetwo <- mdy("March 3, 2019")
+timetwo
+
+as.double(timeone)
+as.double(timetwo)
+as.double(currenttime)
+```
+
